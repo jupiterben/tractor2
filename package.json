@@ -1,0 +1,23 @@
+{
+  "name": "tractor2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-engine": "cd install/engine && docker build . -t fub/tractor-engine",
+    "start-engine": "cd install/engine && docker run -p 1234:80 --user=tractor fub/tractor-engine",
+    "build-blade": "cd install/blade && docker build . -t fub/tractor-blade",
+    "start-blade": "cd install/blade && docker run --user=tractor fub/tractor-blade",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jupiterben/tractor2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jupiterben/tractor2/issues"
+  },
+  "homepage": "https://github.com/jupiterben/tractor2#readme"
+}
